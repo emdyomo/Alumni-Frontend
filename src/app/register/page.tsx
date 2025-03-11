@@ -3,17 +3,42 @@
 import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import { FaCloudUploadAlt } from "react-icons/fa";
+import { FaCloudUploadAlt, FaTimes, FaBars} from "react-icons/fa";
 
 export default function Register() {
   const [step, setStep] = useState(1);
 
   const handleNext = () => setStep((prev) => prev + 1);
   const handlePrev = () => setStep((prev) => prev - 1);
+   const [menuOpen, setMenuOpen] = useState(false);
+  
+    function AnimatedCounter({ value }: { value: number }) {
+      const [count, setCount] = useState(0);
+  
+      return <span className="text-4xl md:text-5xl font-bold">{count}+</span>;
+    }
 
   return (
-    <div className="container my-5">
-      <h2 className="text-center mb-4">Alumni Registration</h2>
+    // Register Form
+    <div className="container my-5 " >
+                <nav className="bg-gray-800 shadow-md py-4 px-6 flex justify-between items-center relative">
+        <h1 className="text-xl md:text-2xl font-bold text-white">Alumni Portal</h1>
+        {/* Mobile Menu Toggle */}
+        <div className="md:hidden">
+          <button onClick={() => setMenuOpen(!menuOpen)}>
+            {menuOpen ? <FaTimes className="text-white text-2xl" /> : <FaBars className="text-white text-2xl" />}
+            
+          </button>
+        </div>
+        {/* Desktop Menu */}
+        <div className={`absolute md:static top-6 left-0 w-full md:w-auto bg-gray-800 md:flex md:space-x-4 transition-all ${menuOpen ? "block" : "hidden"}`}>
+          <a href="/login" className="block md:inline bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-300">Login</a>
+          <a href="/register" className="block md:inline bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-300">Register</a>
+        </div>
+        </nav>
+            <h2 className="text-center top-6 mb-2">Alumni Registration</h2>
+
+      
 
       {/* Step Wizard */}
       <div className="step-wizard mb-5 d-flex justify-content-between">
@@ -73,10 +98,9 @@ export default function Register() {
                 <label className="form-label">Department*</label>
                 <select className="form-select" required>
                   <option value="">Select Department</option>
-                  <option value="cs">Computer Science</option>
-                  <option value="engineering">Engineering</option>
-                  <option value="business">Business</option>
-                  <option value="arts">Arts</option>
+                  <option value="art">Art</option>
+                  <option value="commercial">Commercial</option>
+                  <option value="science">Science</option>
                 </select>
               </div>
             </div>

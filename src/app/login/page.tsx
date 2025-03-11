@@ -3,6 +3,7 @@
 import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import { FaCloudUploadAlt, FaTimes, FaBars} from "react-icons/fa";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -18,10 +19,30 @@ export default function Login() {
     }
     setError("");
     alert("Login successful!"); // Replace with actual authentication logic
+    const [menuOpen, setMenuOpen] = useState(false);
+  
+    function AnimatedCounter({ value }: { value: number }) {
+      const [count, setCount] = useState(0);
+  
+      return <span className="text-4xl md:text-5xl font-bold">{count}+</span>;
+    }
+
   };
 
   return (
     <div className="container my-5">
+                <nav className="bg-gray-800 shadow-md py-4 px-6 flex justify-between items-center relative">
+        <h1 className="text-xl md:text-2xl font-bold text-white">Alumni Portal</h1>
+        {/* Mobile Menu Toggle */}
+        <div className="md:hidden">
+            
+        </div>
+        {/* Desktop Menu */}
+        <div className={`absolute md:static top-6 left-0 w-full md:w-auto  md:flex md:space-x-4 transition-all "hidden"}`}>
+          <a href="/login" className="block md:inline bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-300">Login</a>
+          <a href="/register" className="block md:inline bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-300">Register</a>
+        </div>
+        </nav>
       <h2 className="text-center mb-4">Alumni Portal Login</h2>
 
       <div className="row justify-content-center">

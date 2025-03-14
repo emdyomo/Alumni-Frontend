@@ -7,11 +7,6 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import Navbar from "../component/Navbar";
-import Hero from "../component/Hero";
-import Features from "../Features/page";
-import Stats from "../Stats/page";
-import Footer from "../component/Footer";
 
 export default function Gallery() {
     const images = [

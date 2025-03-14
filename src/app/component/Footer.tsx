@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+
 import {FaTwitter, FaInstagram, FaLinkedin, FaFacebook } from "react-icons/fa";
 
 export default function Footer() {;

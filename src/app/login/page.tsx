@@ -3,7 +3,6 @@
 import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import { FaCloudUploadAlt, FaTimes, FaBars} from "react-icons/fa";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -19,15 +18,6 @@ export default function Login() {
     }
     setError("");
     alert("Login successful!"); // Replace with actual authentication logic
-    const [menuOpen, setMenuOpen] = useState(false);
-  
-    function AnimatedCounter({ value }: { value: number }) {
-      const [count, setCount] = useState(0);
-  
-      return <span className="text-4xl md:text-5xl font-bold">{count}+</span>;
-    }
-
-  };
 
   return (
     <div className="container my-5">

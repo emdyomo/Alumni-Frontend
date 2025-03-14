@@ -1,5 +1,6 @@
-"use client";
+"use case";
 
+<<<<<<< HEAD
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import img from "@/assets/img.jpg";
@@ -35,8 +36,19 @@ export default function Home() {
 
     return <span className="text-4xl md:text-5xl font-bold">{count}+</span>;
   }
+=======
+import Navbar from "./component/Navbar";
+import Footer from "./component/Footer";
+import Gallery from "./Gallery/page";
+import Event from "./Event/event";
+import Features from "./Features/page";
+import Hero from "./component/Hero";
+import Stats from "./Stats/page";
+>>>>>>> 69f7301 (Initial commit)
 
+export default function Page() {
   return (
+<<<<<<< HEAD
     <main className="min-h-screen bg-gray-600">
       {/* Navbar */}
       <nav className="bg-gray-800 shadow-md py-4 px-6 flex justify-between items-center relative">
@@ -145,5 +157,15 @@ export default function Home() {
         <p className="mt-6">© 2025 Alumni Portal. All rights reserved.</p>
       </footer>
     </main>
+=======
+    <div>
+      <Navbar />
+      <Hero/>
+      <Features/>
+      <Stats/>
+      <Gallery />
+      <Footer />
+    </div>
+>>>>>>> 69f7301 (Initial commit)
   );
 }

@@ -1,13 +1,10 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import { motion } from "framer-motion";
-import { FaBars, FaTimes, FaUsers, FaBriefcase, FaRegCalendarCheck, FaTwitter, FaInstagram, FaLinkedin, FaFacebook } from "react-icons/fa";
 
 export default function Hero() {
-    const [menuOpen, setMenuOpen] = useState(false);
-  return (
+return (
     <main>
           {/* Hero Section */}
       <section className="relative flex flex-col items-center justify-center text-center min-h-screen py-16 md:py-32 bg-cover bg-center bg-no-repeat bg-opacity" style={{ backgroundImage: "url('/img.jpg')" }}>

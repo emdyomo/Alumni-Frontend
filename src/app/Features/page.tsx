@@ -1,12 +1,10 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import { motion } from "framer-motion";
 
 
 export default function Features() {
-    const [menuOpen, setMenuOpen] = useState(false);
   return (
     <main>
         {/* Features Section */}

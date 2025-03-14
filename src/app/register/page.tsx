@@ -154,3 +154,4 @@ export default function Register() {
     </main>
   );
 }
+// Compare this snippet from src/app/Stats/page.tsx:

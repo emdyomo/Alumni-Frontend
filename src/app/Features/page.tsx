@@ -3,9 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { FaBars, FaTimes, FaUsers, FaBriefcase, FaRegCalendarCheck, FaTwitter, FaInstagram, FaLinkedin, FaFacebook } from "react-icons/fa";
-import Navbar from "../component/Navbar";
-import Footer from "../component/Footer";
+
 
 export default function Features() {
     const [menuOpen, setMenuOpen] = useState(false);

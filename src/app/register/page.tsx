@@ -17,7 +17,7 @@ export default function Register() {
       <Navbar />
       <div className="container my-5">
         {/* Title */}
-        <h2 className="text-center top-6 mb-4">Alumni Registration</h2>
+        <h2 className="py-30 px-6 bg-white text-center">Alumni Registration</h2>
 
         {/* Step Progress Tracker */}
         <div className="d-flex justify-content-between align-items-center position-relative mb-5">

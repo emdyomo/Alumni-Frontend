@@ -25,7 +25,7 @@ export default function Gallery() {
         <main>
             <Navbar/>
             {/* Gallery Section */}
-            <section className="py-16 px-6 bg-gray-100 text-center">
+            <section className="py-23 px-6 bg-white text-center">
                 <h3 className="text-3xl font-semibold mb-6 text-gray-800">Gallery</h3>
                 <div className="w-full max-w-5xl mx-auto">
                     <Swiper

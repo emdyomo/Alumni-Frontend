@@ -1,10 +1,10 @@
 "use client";
 
-import { useState, useEffect } from "react";
+
 import { motion } from "framer-motion";
 
 export default function Hero() {
-    const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <main>
           {/* Hero Section */}

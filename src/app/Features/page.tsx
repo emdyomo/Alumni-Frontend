@@ -17,7 +17,7 @@ export default function Features() {
             { icon: FaBriefcase, title: "Job Board", text: "Access exclusive job opportunities." },
             { icon: FaRegCalendarCheck, title: "Events", text: "Stay informed about alumni gatherings." }
           ].map(({ icon: Icon, title, text }, i) => (
-            <motion.div key={i} className="bg-white p-6 rounded-lg shadow-lg border transition-transform transform hover:scale-105" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: i * 0.2 }}>
+            <motion.div key={i} className="bg-white p-9 rounded-lg shadow-lg border transition-transform transform hover:scale-105" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: i * 0.2 }}>
               <Icon className="text-blue-600 text-5xl mb-3 mx-auto" />
               <h4 className="text-xl font-semibold text-gray-800 mb-2">{title}</h4>
               <p className="text-gray-600">{text}</p>

@@ -1,9 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import Image from "next/image";
-import { motion } from "framer-motion";
-import { FaBars, FaTimes, FaUsers, FaBriefcase, FaRegCalendarCheck, FaTwitter, FaInstagram, FaLinkedin, FaFacebook } from "react-icons/fa";
+import { useState } from "react";
+import { FaTwitter, FaInstagram, FaLinkedin, FaFacebook } from "react-icons/fa";
 
 export default function Footer() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -18,9 +16,9 @@ export default function Footer() {
           </div>
           <div>
             <h4 className="text-xl font-semibold text-white mb-4">Quick Links</h4>
-            <p><a href="/home" className="hover:text-blue-400">Home</a></p>
-            <p><a href="/home" className="hover:text-blue-400">Gallery</a></p>
-            <p><a href="/home" className="hover:text-blue-400">Events</a></p>
+            <p><a href="#" className="hover:text-blue-400">Home</a></p>
+            <p><a href="#" className="hover:text-blue-400">Gallery</a></p>
+            <p><a href="#" className="hover:text-blue-400">Events</a></p>
           </div>
           <div>
             <h4 className="text-xl font-semibold text-white mb-4">Follow Us</h4>

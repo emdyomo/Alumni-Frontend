@@ -1,17 +1,11 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import Navbar from "../component/Navbar";
-import Hero from "../component/Hero";
-import Features from "../Features/page";
-import Stats from "../Stats/page";
-import Footer from "../component/Footer";
 
 export default function Gallery() {
     const images = [
@@ -41,14 +35,15 @@ export default function Gallery() {
                     >
                         {images.map((src, index) => (
                             <SwiperSlide key={index}>
-                                <div className="relative w-full h-96"> {/* Increased height */}
-                                    <Image 
-                                        src={src} 
-                                        alt={`Gallery image ${index + 1}`} 
-                                        layout="fill" 
-                                        objectFit="cover"
-                                        className="rounded-lg"
-                                    />
+                                <div className="relative w-full h-100"> {/* Increased height */}
+                                <Image 
+                                    src={src} 
+                                    alt={`Gallery image ${index + 1}`} 
+                                    width={800} 
+                                    height={500} 
+                                    className="rounded-lg w-full h-auto object-cover" 
+                                />
+
                                 </div>
                             </SwiperSlide>
                         ))}

@@ -3,12 +3,13 @@
 
 import { motion } from "framer-motion";
 import {FaUsers, FaBriefcase, FaRegCalendarCheck } from "react-icons/fa";
-
+import Navbar from "../component/Navbar";
 
 
 export default function Features() {
   return (
     <main>
+      <Navbar/>
         {/* Features Section */}
       <section className="py-23 px-6 bg-white text-center">
         <h3 className="text-3xl font-semibold mb-6 text-gray-800">Features</h3>

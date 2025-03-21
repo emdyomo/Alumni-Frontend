@@ -14,14 +14,14 @@ export default function Footer() {;
           </div>
           <div>
             <h4 className="text-xl font-semibold text-white mb-4">Quick Links</h4>
-            <p><a href="#" className="hover:text-blue-400">Home</a></p>
-            <p><a href="#" className="hover:text-blue-400">Gallery</a></p>
+            <p><a href="/Home" className="hover:text-blue-400">Home</a></p>
+            <p><a href="/Gallery" className="hover:text-blue-400">Gallery</a></p>
             <p><a href="#" className="hover:text-blue-400">Events</a></p>
           </div>
           <div>
             <h4 className="text-xl font-semibold text-white mb-4">Follow Us</h4>
-            <div className="flex justify-center space-x-4">
-             <a href="#"><FaLinkedin size={24} /></a> 
+            <div className="flex justify-center space-x-4 " >
+             <a href="#" className="hover:text-blue-400"><FaLinkedin size={24} /></a> 
              <a href="#"><FaFacebook size={24} /></a>
              <a href="#"><FaTwitter size={24} /></a>
              <a href="#"><FaInstagram size={24} /></a>

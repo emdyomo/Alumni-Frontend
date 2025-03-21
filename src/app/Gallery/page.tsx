@@ -6,21 +6,24 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import Navbar from "../component/Navbar";
+
 
 export default function Gallery() {
     const images = [
-        "/img.jpg",
-        "/img.jpg",
-        "/img.jpg",
-        "/img.jpg",
-        "/img.jpg",
-        "/img.jpg",
-        "/img.jpg",
-        "/img.jpg",
+        "/img1.jpg",
+        "/img2.jpg",
+        "/img3.jpg",
+        "/img4.jpg",
+        "/img5.jpg",
+        "/img2.jpg",
+        "/img1.jpg",
+        "/img5.jpg",
     ];
 
     return (
         <main>
+            <Navbar/>
             {/* Gallery Section */}
             <section className="py-16 px-6 bg-gray-100 text-center">
                 <h3 className="text-3xl font-semibold mb-6 text-gray-800">Gallery</h3>
@@ -40,7 +43,7 @@ export default function Gallery() {
                                     src={src} 
                                     alt={`Gallery image ${index + 1}`} 
                                     width={800} 
-                                    height={500} 
+                                    height={600} 
                                     className="rounded-lg w-full h-auto object-cover" 
                                 />
 

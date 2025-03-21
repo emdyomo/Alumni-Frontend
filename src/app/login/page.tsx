@@ -10,7 +10,7 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
-  const [menuOpen, setMenuOpen] = useState(false); // Moved to top level
+  const [ ] = useState(false); // Moved to top level
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
@@ -31,6 +31,7 @@ export default function Login() {
         <h2 className="text-center mb-4">Alumni Portal Login</h2>
 
         <div className="row justify-content-center">
+          
           <div className="col-md-6">
             <div className="card p-4 shadow">
               <form onSubmit={handleLogin}>

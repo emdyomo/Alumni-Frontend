@@ -39,14 +39,14 @@ export default function Navbar() {
         } md:hidden flex flex-col items-center justify-center space-y-6 menu-container`}
       >
         {/* Close Button */}
-        <button onClick={() => setMenuOpen(false)} className="absolute top-5 right-5">
+        <button onClick={() => setMenuOpen(false)} className="flex top-5 right-5">
           <FaTimes className="text-white text-2xl" />
         </button>
 
-        <a href="/Page" className="block px-6 py-3 hover:text-blue-400">Home</a>
+        <a href="/Home" className="block px-6 py-3 hover:text-blue-400">Home</a>
         <a href="#" className="block px-6 py-3 hover:text-blue-400">Events</a>
-        <a href="#" className="block px-6 py-3 hover:text-blue-400">Features</a>
-        <a href="#" className="block px-6 py-3 hover:text-blue-400">Gallery</a>
+        <a href="/Features" className="block px-6 py-3 hover:text-blue-400">Features</a>
+        <a href="/Gallery" className="block px-6 py-3 hover:text-blue-400">Gallery</a>
         <a href="/login" className="block px-6 py-3 hover:text-blue-400">Login</a>
         <a href="/register" className="block px-6 py-3 hover:text-blue-400">Register</a>
       </div>
@@ -55,10 +55,10 @@ export default function Navbar() {
       <div className="hidden md:flex md:space-x-6">
         <a href="/Home" className="text-white hover:text-blue-400">Home</a>
         <a href="#" className="text-white hover:text-blue-400">Events</a>
-        <a href="#" className="text-white hover:text-blue-400">Features</a>
-        <a href="#" className="text-white hover:text-blue-400">Gallery</a>
-        <a href="/login" className="text-white px-4 py-2 rounded-lg hover:text-blue-400">Login</a>
-        <a href="/register" className="text-white px-4 py-2 rounded-lg hover:text-blue-400">Register</a>
+        <a href="/Features" className="text-white hover:text-blue-400">Features</a>
+        <a href="/Gallery" className="text-white hover:text-blue-400">Gallery</a>
+        <a href="/login" className="text-white px-4 py-2 rounded-lg hover:text-blue-400 bg-blue-300 text-white px-6 py-3 rounded-lg ">Login</a>
+        <a href="/register" className="text-white px-4 py-2 rounded-lg hover:text-blue-400 bg-blue-300 text-white px-6 py-3 rounded-lg" >Register</a>
       </div>
     </nav>
   );

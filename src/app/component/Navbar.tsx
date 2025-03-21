@@ -1,8 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Page from "../page";
-import { FaBars, FaTimes } from "react-icons/fa";
+import {FaBars, FaTimes } from "react-icons/fa";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);

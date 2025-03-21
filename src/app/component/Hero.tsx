@@ -1,23 +1,17 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function Hero() {
     const [menuOpen, setMenuOpen] = useState(false);
-    
-    return (
-        <main className="min-h-screen">
-            {/* Hero Section */}
-            <section 
-                className="relative flex flex-col items-center justify-center text-center min-h-screen py-16 md:py-32 bg-cover bg-center bg-no-repeat"
-                style={{ 
-                    backgroundImage: "url('https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?q=80&w=2070&auto=format&fit=crop')",
-                }}
-            >
-                <div className="absolute inset-0 bg-gray-800 bg-opacity-50"></div>
-                <motion.div 
-                    className="relative z-10 text-white px-6" // Changed to white for better contrast
+  return (
+    <main>
+          {/* Hero Section */}
+      <section className="relative flex flex-col items-center justify-center text-center min-h-screen py-16 md:py-32 bg-cover bg-center bg-no-repeat bg-opacity" style={{ backgroundImage: "url('/img.jpg')" }}>
+        <div className="absolute inset-0 bg-grey-900 bg-opacity-0"></div>
+        <motion.div className="relative z-10 px-6 py-8 bg-white bg-opacity-20 backdrop-blur-lg rounded-lg max-w-lg"
                     initial={{ opacity: 0, y: -20 }} 
                     animate={{ opacity: 1, y: 0 }} 
                     transition={{ duration: 0.8 }}

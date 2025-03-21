@@ -18,6 +18,7 @@ export default function Login() {
       setError("Please fill in both fields.");
       return;
     }
+    }
     setError("");
     alert("Login successful!"); // Replace with actual authentication logic
     const [menuOpen, setMenuOpen] = useState(false);

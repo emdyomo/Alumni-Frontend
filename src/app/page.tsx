@@ -3,7 +3,6 @@
 import Navbar from "./component/Navbar";
 import Footer from "./component/Footer";
 import Gallery from "./Gallery/page";
-import Event from "./Event/page";
 import Features from "./Features/page";
 import Hero from "./component/Hero";
 import Stats from "./Stats/page";

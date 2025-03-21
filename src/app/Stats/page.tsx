@@ -2,9 +2,9 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { FaBars, FaTimes, FaUsers, FaBriefcase, FaRegCalendarCheck, FaTwitter, FaInstagram, FaLinkedin, FaFacebook } from "react-icons/fa";
 
 export default function Stats() {
-    const [menuOpen, setMenuOpen] = useState(false);
     function AnimatedCounter({ value }: { value: number }) {
         const [count, setCount] = useState(0);
     

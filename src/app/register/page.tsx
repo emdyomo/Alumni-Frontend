@@ -5,7 +5,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { FaCloudUploadAlt, FaCheckCircle } from "react-icons/fa";
 import Navbar from "../component/Navbar";
-import Footer from "../component/Footer";
 
 export default function Register() {
   const [step, setStep] = useState(1);

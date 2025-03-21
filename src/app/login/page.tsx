@@ -4,7 +4,6 @@ import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import Navbar from "../component/Navbar";
-import Footer from "../component/Footer";
 
 export default function Login() {
   const [email, setEmail] = useState("");

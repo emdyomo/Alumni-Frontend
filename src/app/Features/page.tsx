@@ -2,6 +2,8 @@
 
 
 import { motion } from "framer-motion";
+import { FaBars, FaTimes, FaUsers, FaBriefcase, FaRegCalendarCheck, FaTwitter, FaInstagram, FaLinkedin, FaFacebook } from "react-icons/fa";
+
 
 
 export default function Features() {

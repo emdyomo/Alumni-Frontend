@@ -8,9 +8,28 @@ import Navbar from "../component/Navbar";
 
 export default function Register() {
   const [step, setStep] = useState(1);
+  const [success, setSuccess] = useState(false); // To manage success state
 
-  const handleNext = () => setStep((prev) => (prev < 4 ? prev + 1 : prev));
+  const handleNext = () => {
+    const form = document.querySelector("form");
+  
+    // Ensure the form exists before calling checkValidity
+    if (form && !form.checkValidity()) {
+      form.reportValidity();
+    } else {
+      setStep((prev) => (prev < 4 ? prev + 1 : prev));
+    }
+  };
+  
+
   const handlePrev = () => setStep((prev) => (prev > 1 ? prev - 1 : prev));
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault(); // Prevent form submission
+    setSuccess(true);
+    alert("Registration Successful!"); // Pop-up message on successful registration
+  };
+  
 
   return (
     <main>
@@ -38,7 +57,7 @@ export default function Register() {
         </div>
 
         {/* Registration Form */}
-        <form className="needs-validation" noValidate>
+        <form className="needs-validation" noValidate onSubmit={handleSubmit}>
           {/* Step 1: Basic Information */}
           {step === 1 && (
             <div className="form-section active">
@@ -127,9 +146,9 @@ export default function Register() {
                 <div className="col-md-6">
                   <label className="form-label">ID Proof*</label>
                   <div className="file-upload border p-3 text-center" onClick={() => document.getElementById("idProof")?.click()}>
-                    <FaCloudUploadAlt className="text-grey-600 text-5xl mb-3 mx-auto"/>
+                    <FaCloudUploadAlt className="text-grey-600 text-5xl mb-3 mx-auto" />
                     <p>Click or drag to upload ID proof</p>
-                    <input type="file" id="idProof" className="d-none" accept="image/*,.pdf" />
+                    <input type="file" id="idProof" className="d-none" accept="image/*,.pdf" required />
                   </div>
                 </div>
                 <div className="col-md-6">
@@ -137,7 +156,7 @@ export default function Register() {
                   <div className="file-upload border p-3 text-center" onClick={() => document.getElementById("degreeCertificate")?.click()}>
                     <FaCloudUploadAlt className="text-grey-600 text-5xl mb-3 mx-auto" />
                     <p>Click or drag to upload degree certificate</p>
-                    <input type="file" id="degreeCertificate" className="d-none" accept="image/*,.pdf" />
+                    <input type="file" id="degreeCertificate" className="d-none" accept="image/*,.pdf" required />
                   </div>
                 </div>
               </div>
@@ -152,4 +171,3 @@ export default function Register() {
     </main>
   );
 }
-// Compare this snippet from src/app/Stats/page.tsx:

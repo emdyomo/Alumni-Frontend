@@ -8,7 +8,7 @@ import Navbar from "../component/Navbar";
 
 export default function Register() {
   const [step, setStep] = useState(1);
-  const [ setSuccess] = useState(false); // To manage success state
+  const [success, setSuccess] = useState<boolean>(false);
 
   const handleNext = () => {
     const form = document.querySelector("form");
